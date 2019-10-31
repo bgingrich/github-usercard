@@ -103,6 +103,7 @@ function GitHubCards(data) {
     cardInfo.appendChild(pUser);
     cardInfo.appendChild(pLocation);
     cardInfo.appendChild(pProfile);
+    cardInfo.appendChild(aProfileUrl);
     cardInfo.appendChild(pFollowers);
     cardInfo.appendChild(pFollowing);
     cardInfo.appendChild(pBio);
@@ -111,6 +112,7 @@ function GitHubCards(data) {
     h3Name.textContent = `${data.name}`;
     pUser.textContent = `${data.login}`;
     pLocation.textContent = `${data.location}`;
+    aProfileUrl.setAttribute('href', data.html_url);
     aProfileUrl.textContent = `${data.html_url}`;
     pFollowers.textContent = `${data.followers}`;
     pFollowing.textContent = `${data.following}`;
